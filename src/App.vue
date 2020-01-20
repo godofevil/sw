@@ -2,8 +2,8 @@
     <div id="app">
         <div class="container">
             <div class="wrap">
-                <Controls @getCity="getWeather"/>
-                <Weather v-if="isWeather" v-bind:weather="currentWeather"/>
+                <Controls @getCity="getWeather" v-bind:error="error"/>
+                <Weather v-if="isWeather" v-bind:weather="currentWeather" />
                 <div class="forecast">
                     <Forecast
                         v-for="day in currentWeather.data" :key="day.id"
@@ -25,7 +25,8 @@
         data() {
             return {
                 currentWeather: {},
-                isWeather: false
+                isWeather: false,
+                error: false
             }
         },
         components: {
@@ -38,11 +39,11 @@
                 await fetch(`https://api.weatherbit.io/v2.0/forecast/daily?lang=ru&days=6&key=c5b6f46667fc42f487d9a1652a63664a&city=${city}`)
                     .then(response => response.json())
                     .then(response => {
-                        this.currentWeather = response;
-                        this.currentWeather.data.shift();
                         this.isWeather = true;
+                        this.currentWeather = response;
+                        this.currentWeather.data.shift();                        
                     })
-                    .catch(error => alert(error))
+                    .catch(this.error = true)
             }
         }
     }
