@@ -2,15 +2,11 @@
     <form class="controls" @submit.prevent="getCity">
         <input placeholder="Enter city..." type="search" autofocus="autofocus" v-model="city">
         <button type="submit">Search</button>
-        <div v-if="error" class="error">ttt</div>
     </form>
 </template>
 
 <script>
     export default {
-        props: {
-            error: false
-        },
         data() {
             return {
                 city: ''
@@ -22,18 +18,19 @@
                     this.$emit('getCity', this.city);
                     this.city = '';
                 }
-            }
+            },
         }
     }
 </script>
 
 <style lang="sass" scoped>
     .controls
+        position: relative
         display: grid
         grid:
             template-columns: auto 70px
             column-gap: 20px
-        height: 30px
+        height: 40px
         padding-top: 15px
         input
             outline: 0

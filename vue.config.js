@@ -1,4 +1,4 @@
 // vue.config.js
 module.exports = {
-    publicPath: '<SW4>'
+    publicPath: '/sw/'
 }
