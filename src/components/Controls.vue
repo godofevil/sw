@@ -34,8 +34,8 @@
         @media (max-width: 640px)
             grid-template-columns: auto
         & *
-            height: 30px
-            font-size: 1.2rem
+            height: 40px
+            font-size: 1.3rem
             border-radius: 4px
             @media (max-width: 640px)
                 height: 50px
