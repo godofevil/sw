@@ -68,6 +68,9 @@
                         case icon >= 300 && icon <= 302 :
                             icon = 'wi-hail';
                             break;
+                        case icon >= 500 && icon <= 501 :
+                            icon = 'wi-day-rain-mix';
+                            break;
                         case icon == 502 :
                             icon = 'wi-rain-wind';
                             break;
@@ -121,7 +124,7 @@
                             break;
                         default:
                             break;
-                    }                    
+                    }
                     item.weather.code = `wi ${icon}`;
                 });
             }

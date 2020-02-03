@@ -18,4 +18,6 @@ export default {
         left: 50%
         transform: translateX(-50%)
         color: #ff0505
+        width: 100%
+        text-align: center
 </style>

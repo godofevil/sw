@@ -1,7 +1,7 @@
 <template lang="html">
     <form class="controls" @submit.prevent="getCity">
         <input placeholder="Enter city..." type="search" autofocus="autofocus" v-model="city">
-        <button type="submit">Search</button>
+        <button type="submit">Get weather</button>
     </form>
 </template>
 
@@ -28,7 +28,7 @@
         position: relative
         display: grid
         grid:
-            template-columns: auto 70px
+            template-columns: auto fit-content(100%)
             column-gap: 20px
         height: 40px
         padding-top: 15px
@@ -37,11 +37,18 @@
             font-size: 18px
             border-radius: 4px
             margin: 2px
-            border: 1px solid #bbb2b2
+            border: 1px solid #5997cc
+            color: #5997cc
             overflow: auto
             padding: 5px
+            transition: box-shadow .1s
+            &:focus
+                box-shadow: 0px 0px 6px -1px rgba(89,151,204,1)
         button
             outline: 0
+            padding:
+                left: 10px
+                right: 10px
             font-size: 18px
             border-radius: 4px
             margin: 2px
