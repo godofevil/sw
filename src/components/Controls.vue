@@ -32,6 +32,10 @@
             column-gap: 20px
         height: 40px
         padding-top: 15px
+        @media (max-width: 640px)
+            grid-template-columns: auto
+        & *
+            height: 30px
         input
             outline: 0
             font-size: 18px
@@ -44,6 +48,8 @@
             transition: box-shadow .1s
             &:focus
                 box-shadow: 0px 0px 6px -1px rgba(89,151,204,1)
+            &::placeholder
+                color: lighten(#5997cc, 20%)
         button
             outline: 0
             padding:

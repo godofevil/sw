@@ -62,5 +62,5 @@
 
     @media (max-width: 640px)
         .weather
-            margin: 30px 0
+            margin: 60px 0
 </style>

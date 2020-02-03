@@ -20,4 +20,6 @@ export default {
         color: #ff0505
         width: 100%
         text-align: center
+        @media (max-width: 640px)
+            top: 1%
 </style>
