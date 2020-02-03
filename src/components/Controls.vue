@@ -30,16 +30,18 @@
         grid:
             template-columns: auto fit-content(100%)
             column-gap: 20px
-        height: 40px
         padding-top: 15px
         @media (max-width: 640px)
             grid-template-columns: auto
         & *
             height: 30px
+            font-size: 1.2rem
+            border-radius: 4px
+            @media (max-width: 640px)
+                height: 50px
+                font-size: 1.5rem
         input
             outline: 0
-            font-size: 18px
-            border-radius: 4px
             margin: 2px
             border: 1px solid #5997cc
             color: #5997cc
@@ -47,7 +49,7 @@
             padding: 5px
             transition: box-shadow .1s
             &:focus
-                box-shadow: 0px 0px 6px -1px rgba(89,151,204,1)
+                box-shadow: 0px 0px 4px -1px rgba(89,151,204,1)
             &::placeholder
                 color: lighten(#5997cc, 20%)
         button
@@ -55,8 +57,6 @@
             padding:
                 left: 10px
                 right: 10px
-            font-size: 18px
-            border-radius: 4px
             margin: 2px
             cursor: pointer
             color: #fff
